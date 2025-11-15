@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps Scraper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Google Maps Scraper</h1>
+
+    <div class="input-box">
+        <input id="queryInput" type="text" placeholder="Enter search query (example: restaurants in italy)">
+        <button id="scrapeBtn">Scrape</button>
+    </div>
+    <div id="limitBox">
+    Response Limit: <input id="responseLimit" type="number" placeholder="Enter result limit (default 20)" min="1" max="100"></div>
+    <div id="loading" class="hidden">Scraping... please wait.</div>
+
+    <div id="resultSection" class="hidden">
+        <div class="header-row">
+            <h2>Results</h2>
+            <button id="exportCSV">Export CSV</button>
+        </div>
+
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                    <th>Rating</th>
+                    <th>Reviews</th>
+                    <th>Maps URL</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div id="pagination">
+            <button id="prevPage">Prev</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage">Next</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
